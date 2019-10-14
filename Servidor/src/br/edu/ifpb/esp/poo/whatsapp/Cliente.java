@@ -10,11 +10,11 @@ public class Cliente {
 		try {
 
 			WhatsServerInterface stub = (WhatsServerInterface) Naming.lookup("//192.168.3.156/whatsapp");
-			
-//		System.out.println("Nome do usuario");
-//		String contato = sc.nextLine();
-//		Boolean response = stub.cadastrarUsuario(contato);
-//			System.out.println("response: " + response);
+
+			System.out.println("Nome do usuario");
+			String contato = sc.nextLine();
+			Boolean response = stub.cadastrarUsuario(contato);
+			System.out.println("response: " + response);
 			String[] contatos = stub.contatos();
 			for (String string : contatos) {
 				System.out.println(string);
@@ -25,4 +25,3 @@ public class Cliente {
 		}
 	}
 }
-
